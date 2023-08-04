@@ -10,50 +10,12 @@
 
 <body>
   <h1>Relative Age Calculator</h1>
-  <!--<div class="choice">
-    <form>
-      <h3 class="prompt">Your character's ancestry: </h3>
-        <input type="radio" id="halfling" name="ancestry" value="Halfling">
-        <label for="Halfling">Halfling</label><br>
-        <input type="radio" id="elf" name="ancestry" value="Elf">
-        <label for="Elf">Elf</label><br>
-        <input type="radio" id="dwarf" name="ancestry" value="Dwarf">
-        <label for="Dwarf">Dwarf</label><br>
-        <input type="radio" id="dragonborn" name="ancestry" value="Dragonborn">
-        <label for="Dragonborn">Dragonborn</label><br>
-        <input type="radio" id="gnome" name="ancestry" value="Gnome">
-        <label for="Gnome">Gnome</label><br>
-        <input type="radio" id="half-elf" name="ancestry" value="Half-Elf">
-        <label for="Half-Elf">Half-Elf</label><br>
-        <input type="radio" id="half-orc" name="ancestry" value="Half-Orc">
-        <label for="Half-Orc">Half-Orc</label><br>
-        <input type="radio" id="orc" name="ancestry" value="Orc">
-        <label for="Orc">Orc</label><br>
-        <input type="radio" id="shifter" name="ancestry" value="Shifter">
-        <label for="Shifter">Shifter</label><br>
-        <input type="radio" id="warforged" name="ancestry" value="Warforged">
-        <label for="Warforged">Warforged</label><br>
-        <input type="radio" id="human" name="ancestry" value="Human">
-        <label for="Human">Human</label><br>
-        <input type="radio" id="tiefling" name="ancestry" value="Tiefling">
-        <label for="Tiefling">Tiefling</label><br>
-        <input type="radio" id="changeling" name="ancestry" value="Changeling">
-        <label for="Changeling">Changeling</label><br>
-        <input type="radio" id="kalashtar" name="ancestry" value="Kalashtar">
-        <label for="Kalashtar">Kalashtar</label><br>
-        <input type="radio" id="other" name="ancestry" value="Other">
-        <label for="Other">Other</label>
-      <h3 class="prompt">Your character's age:</h3><input type="number" id="age" name="Age"><br>
-
-      <input type="submit" class="submit">
-    </form>
-  </div> -->
-  <div class="choice">
-    <p>Enter your age:</p>
-<input type="number" id="age" name="age"
+ <div class="choice">  
+<h3 class="prompt">Enter your character's age:</h3>
+<input type="number" id="age" name="age" class="age question"
     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
-<p>Choose your ancestry:</p>
-<select name="ancestry" id="ancestry">
+<h3>Enter your character's ancestry:</h3>
+<select name="ancestry" id="ancestry" class="question ancestry">
   <option value="" disabled selected></option>
   <option id="human" value="a human" >Human</option>
   <option id="elf" value="an elf">Elf</option>
@@ -70,15 +32,19 @@
   <option id="changeling" value="a changeling">Changeling</option>
   <option id="kalashtar" value="a kalashtar">Kalashtar</option>
 </select>
-<br></br>
-<input type="submit" onclick="results()"></input>
-<button onclick="reset()">Reset</button>
+
+<div class="buttons">
+<input type="submit" onclick="results()" class="button"></input>
+<button onclick="reset()" class="button">Reset</button>
+</div>
+</div>
+<div class="results">
 <p id="ancestryresult"></p>
 <p id="ageresult"></p>
 <p id="percentageresult"></p>
-  </div>
+</div>
   <div class="hotdog">
-  <a href="hotdog.html">Picture of a hot dog.</a>
+  <a href="hotdog.html">Additional Information </a>
 </div>  
 </body>
 <footer>

@@ -66,6 +66,9 @@ footer {
   text-align: center;
   margin:auto;
 }
+.hotdog {
+  display:flex;
+}
 .hotdog img {
   width: 15%;
   text-align: justify;

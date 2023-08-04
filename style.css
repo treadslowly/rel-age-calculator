@@ -1,46 +1,61 @@
-h1{font-family: fantasy;}
-h1, p {
-    text-align: center;
-  }
-  body {
-    background-image: url(https://www.melissamcphail.com/wp-content/uploads/2012/10/Shdw_Art01a.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-color:#111B1F;
-    
-  }
-  
-  .choice {
-    background: burlywood;
-    opacity: 85%;
-    border: solid 2px black;
-    padding-left: 5%;
-    padding-bottom: 10px;
-    width: 250px;
-    margin: auto;
-    
-  }
-  
-  .submit {
-    margin-top: 10px;
-  }
-  .prompt {
-    margin-bottom: 5px;
-  }
-  footer{
-    color:#69BC35;
-    background-color: blue;
-    width:17%;
-    margin:auto;
-  }
-  .hotdog{
-    text-align: center;
-    color:white;
-  }
-  .hotdog img{
-    width:15%;
-    text-align: justify;
-  }
-  .hotdog a{
-    color:white;
-  }
+
+h1 {
+  font-family: fantasy;
+}
+h1,p,h3 {
+  text-align: center;
+}
+body {
+  background-image: url(https://www.melissamcphail.com/wp-content/uploads/2012/10/Shdw_Art01a.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #111b1f;
+}
+.prompt {
+  margin-bottom: 5px;
+  text-align: center;
+}
+.choice {
+  background: burlywood;
+  opacity: 85%;
+  border: solid 1px black;
+  border-radius: 10px;
+  width: 20%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1%;
+}
+.question,.button {
+  margin: auto;
+}
+.age{
+  margin-top:2%;
+}
+.ancestry {
+  margin-bottom: 2%;
+}
+.buttons {
+  display: flex;
+  padding: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+footer {
+  color: #69bc35;
+  background-color: blue;
+  width: 17%;
+  max-width: 150px;
+  margin: auto;
+}
+.hotdog {
+  text-align: center;
+  color: white;
+}
+.hotdog img {
+  width: 15%;
+  text-align: justify;
+}
+.hotdog a {
+  color: brown;
+}

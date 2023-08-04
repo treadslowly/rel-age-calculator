@@ -1,4 +1,5 @@
 
+
 h1 {
   font-family: fantasy;
 }
@@ -20,7 +21,7 @@ body {
   opacity: 85%;
   border: solid 1px black;
   border-radius: 10px;
-  width: 20%;
+  width:280px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -29,6 +30,19 @@ body {
 .question,.button {
   margin: auto;
 }
+.results {
+  background: burlywood;
+  opacity: 0%;
+  border:solid 1px black;
+  width:260px;
+  border-radius:10px;
+  margin:auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+  
+
 .age{
   margin-top:2%;
 }
@@ -50,7 +64,6 @@ footer {
 }
 .hotdog {
   text-align: center;
-  color: white;
 }
 .hotdog img {
   width: 15%;

@@ -2,7 +2,7 @@ function results() {
     let age = document.getElementById("age").value;
     let ancestry = document.getElementById("ancestry").value;
     let agemax = 85;
-    if (ancestry == "" || age <= 1) {
+    if (ancestry == "" || age <= 0) {
       return;
     }
     switch (ancestry) {
@@ -57,9 +57,11 @@ function results() {
     let percentageresult =
       "You have lived " + Math.floor(percent * 100) / 100 + "% of your life.";
     document.getElementById("percentageresult").innerHTML = percentageresult;
+    document.getElementById("results").style.opacity="85%";
   }
-    function reset() {
+  function reset() {
     document.getElementById("ageresult").innerHTML = "";
     document.getElementById("ancestryresult").innerHTML = "";
     document.getElementById("percentageresult").innerHTML = "";
+    document.getElementById("results").style.opacity = "0%";
   }

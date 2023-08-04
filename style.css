@@ -65,14 +65,7 @@ footer {
 .information {
   text-align: center;
   margin:auto;
-}
-.hotdog {
-  display:flex;
-}
-.hotdog img {
   width: 15%;
-  text-align: justify;
-}
-.information a {
-  color: brown;
+  display:flex;
+  flex-direction:column;
 }

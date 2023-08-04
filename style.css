@@ -62,13 +62,13 @@ footer {
   max-width: 150px;
   margin: auto;
 }
-.hotdog {
+.information {
   text-align: center;
 }
 .hotdog img {
   width: 15%;
   text-align: justify;
 }
-.hotdog a {
+.information a {
   color: brown;
 }

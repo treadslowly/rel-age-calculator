@@ -10,7 +10,7 @@
 
 <body>
   <h1>Relative Age Calculator</h1>
-  <div class="choice">
+  <!--<div class="choice">
     <form>
       <h3 class="prompt">Your character's ancestry: </h3>
         <input type="radio" id="halfling" name="ancestry" value="Halfling">
@@ -47,7 +47,7 @@
 
       <input type="submit" class="submit">
     </form>
-  </div> 
+  </div> -->
   <div class="choice">
     <p>Enter your age:</p>
 <input type="number" id="age" name="age"
@@ -146,9 +146,7 @@
     "You have lived " + Math.floor(percent * 100) / 100 + "% of your life.";
   document.getElementById("percentageresult").innerHTML = percentageresult;
 }
-</script>
-<script>
-function reset() {
+  function reset() {
   document.getElementById("ageresult").innerHTML = "";
   document.getElementById("ancestryresult").innerHTML = "";
   document.getElementById("percentageresult").innerHTML = "";

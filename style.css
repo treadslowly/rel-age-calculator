@@ -39,6 +39,7 @@ h1, p {
   }
   .hotdog img{
     width:15%;
+    text-align: justify;
   }
   .hotdog a{
     color:white;

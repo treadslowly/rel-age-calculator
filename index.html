@@ -12,50 +12,144 @@
   <h1>Relative Age Calculator</h1>
   <div class="choice">
     <form>
-      <h3 class="prompt">Your character's race: </h3>
-        <input type="radio" id="halfling" name="Race" value="Halfling">
+      <h3 class="prompt">Your character's ancestry: </h3>
+        <input type="radio" id="halfling" name="ancestry" value="Halfling">
         <label for="Halfling">Halfling</label><br>
-        <input type="radio" id="elf" name="Race" value="Elf">
+        <input type="radio" id="elf" name="ancestry" value="Elf">
         <label for="Elf">Elf</label><br>
-        <input type="radio" id="dwarf" name="Race" value="Dwarf">
+        <input type="radio" id="dwarf" name="ancestry" value="Dwarf">
         <label for="Dwarf">Dwarf</label><br>
-        <input type="radio" id="dragonborn" name="Race" value="Dragonborn">
+        <input type="radio" id="dragonborn" name="ancestry" value="Dragonborn">
         <label for="Dragonborn">Dragonborn</label><br>
-        <input type="radio" id="gnome" name="Race" value="Gnome">
+        <input type="radio" id="gnome" name="ancestry" value="Gnome">
         <label for="Gnome">Gnome</label><br>
-        <input type="radio" id="half-elf" name="Half-Elf" value="Half-Elf">
+        <input type="radio" id="half-elf" name="ancestry" value="Half-Elf">
         <label for="Half-Elf">Half-Elf</label><br>
-        <input type="radio" id="half-orc" name="Race" value="Half-Orc">
+        <input type="radio" id="half-orc" name="ancestry" value="Half-Orc">
         <label for="Half-Orc">Half-Orc</label><br>
-        <input type="radio" id="orc" name="Race" value="Orc">
+        <input type="radio" id="orc" name="ancestry" value="Orc">
         <label for="Orc">Orc</label><br>
-        <input type="radio" id="shifter" name="Race" value="Shifter">
+        <input type="radio" id="shifter" name="ancestry" value="Shifter">
         <label for="Shifter">Shifter</label><br>
-        <input type="radio" id="warforged" name="Race" value="Warforged">
+        <input type="radio" id="warforged" name="ancestry" value="Warforged">
         <label for="Warforged">Warforged</label><br>
-        <input type="radio" id="human" name="Race" value="Human">
+        <input type="radio" id="human" name="ancestry" value="Human">
         <label for="Human">Human</label><br>
-        <input type="radio" id="tiefling" name="Race" value="Tiefling">
+        <input type="radio" id="tiefling" name="ancestry" value="Tiefling">
         <label for="Tiefling">Tiefling</label><br>
-        <input type="radio" id="changeling" name="Race" value="Changeling">
+        <input type="radio" id="changeling" name="ancestry" value="Changeling">
         <label for="Changeling">Changeling</label><br>
-        <input type="radio" id="kalashtar" name="Kalashtar" value="Kalashtar">
+        <input type="radio" id="kalashtar" name="ancestry" value="Kalashtar">
         <label for="Kalashtar">Kalashtar</label><br>
-        <input type="radio" id="other" name="Race" value="Other">
+        <input type="radio" id="other" name="ancestry" value="Other">
         <label for="Other">Other</label>
       <h3 class="prompt">Your character's age:</h3><input type="number" id="age" name="Age"><br>
 
       <input type="submit" class="submit">
     </form>
   </div> 
+  <div class="choice">
+    <p>Enter your age:</p>
+<input type="number" id="age" name="age"
+    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+<p>Choose your ancestry:</p>
+<select name="ancestry" id="ancestry">
+  <option value="" disabled selected></option>
+  <option id="human" value="a human" >Human</option>
+  <option id="elf" value="an elf">Elf</option>
+  <option id="halfling" value="a halfling">Halfing</option>
+  <option id="dwarf" value="a dwarf">Dwarf</option>
+  <option id="dragonborn" value="a dragonborn">Dragonborn</option>
+  <option id="gnome" value="a gnome">Gnome</option>
+  <option id="half-elf" value="a half-elf">Half-Elf</option>
+  <option id="half-orc" value="a half-orc">Half-Orc</option>
+  <option id="orc" value="an orc">Orc</option>
+  <option id="shifter" value="a shifter">Shifter</option>
+  <option id="warforged" value="a warforged">Warforged</option>
+  <option id="tiefling" value="a tiefling">Tiefling</option>
+  <option id="changeling" value="a changeling">Changeling</option>
+  <option id="kalashtar" value="a kalashtar">Kalashtar</option>
+</select>
+<br></br>
+<input type="submit" onclick="results()"></input>
+<button onclick="reset()">Reset</button>
+<p id="ancestryresult"></p>
+<p id="ageresult"></p>
+<p id="percentageresult"></p>
+  </div>
   <div class="hotdog">
   <a href="hotdog.html">Picture of a hot dog.</a>
-  <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
-
-<p id="demo"></p> 
 </div>  
 </body>
 <footer>
   <p>Measure Twice LLC</p>
 </footer>
 </html>
+<script>
+  function results() {
+  let age = document.getElementById("age").value;
+  let ancestry = document.getElementById("ancestry").value;
+  let agemax = 85;
+  if (ancestry == "" || age <= 1) {
+    return;
+  }
+  switch (ancestry) {
+    case "an elf":
+      agemax = 750;
+      break;
+    case "a halfling":
+      agemax = 150;
+      break;
+    case "a dwarf":
+      agemax = 350;
+      break;
+    case "a dragonborn":
+      agemax = 80;
+      break;
+    case "a gnome":
+      agemax = 450;
+      break;
+    case "a half-elf":
+      agemax = 200;
+      break;
+    case "a half-orc":
+      agemax = 60;
+      break;
+    case "an orc":
+      agemax = 50;
+      break;
+    case "a shifter":
+      agemax = 70;
+      break;
+    case "a warforged":
+      agemax = "unknown";
+      break;
+    case "a tiefling":
+      agemax = 85;
+      break;
+    case "a changeling":
+      agemax = 85;
+      break;
+    case "a kalashtar":
+      agemax = 85;
+      break;
+    default:
+      agemax = 85;
+  }
+  let relage = Math.floor((age / agemax) * 85);
+  let percent = (age / agemax) * 100;
+  let ancestryresult = "You are " + ancestry + ".";
+  document.getElementById("ancestryresult").innerHTML = ancestryresult;
+  let ageresult = "You are " + relage + " years old in human years.";
+  document.getElementById("ageresult").innerHTML = ageresult;
+  let percentageresult =
+    "You have lived " + Math.floor(percent * 100) / 100 + "% of your life.";
+  document.getElementById("percentageresult").innerHTML = percentageresult;
+}
+function reset() {
+  document.getElementById("ageresult").innerHTML = "";
+  document.getElementById("ancestryresult").innerHTML = "";
+  document.getElementById("percentageresult").innerHTML = "";
+}
+
+</script>

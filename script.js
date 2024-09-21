@@ -59,10 +59,9 @@ function results() {
     document.getElementById("percentageresult").innerHTML = percentageresult;
     document.getElementById("results").style.opacity="85%";
   }
-  function resetAll() {
-    document.getElementsByClassName("question").reset();
-    document.getElementById("ageresult").innerHTML = "";
+  function resetForm() {
     document.getElementById("ancestryresult").innerHTML = "";
+    document.getElementById("ageresult").innerHTML = "";
     document.getElementById("percentageresult").innerHTML = "";
     document.getElementById("results").style.opacity = "0%";
   }
